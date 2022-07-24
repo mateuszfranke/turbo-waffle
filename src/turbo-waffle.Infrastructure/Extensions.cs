@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using System.Runtime.CompilerServices;
-using turbo_waffle.Core;
+using turbo_waffle.Core.Repositories;
 
 [assembly: InternalsVisibleTo("turbo-waffle.API")]
 namespace turbo_waffle.Infrastructure
@@ -10,7 +10,8 @@ namespace turbo_waffle.Infrastructure
         internal static IServiceCollection AddInfrastructrure(this IServiceCollection services)
         {
             services
-                .AddSingleton<IFilmRepository, FilmRepository>();
+                .AddSingleton<IFilmRepository, FilmRepository>()
+                .AddSingleton<ICinemaRepository, CinemaRepository>();
 
             return services;
         }

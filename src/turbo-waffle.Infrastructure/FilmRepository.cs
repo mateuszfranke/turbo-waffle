@@ -1,4 +1,4 @@
-﻿using turbo_waffle.Core;
+﻿using turbo_waffle.Core.Repositories;
 
 namespace turbo_waffle.Infrastructure
 {
@@ -11,17 +11,16 @@ namespace turbo_waffle.Infrastructure
             new("The Black Phone",
             "After being abducted by a child killer and locked in a soundproof basement," +
             " a 13-year-old boy starts receiving calls on a disconnected phone from the killer's previous victims.",
-            "Scott Derrickson"),
+            "Scott Derrickson", Guid.Parse("8CBA018F-1EF5-4FB5-A35C-5DFCFFAB8244")),
             new("The Batman",
             "When a sadistic serial killer begins murdering key political figures in Gotham," +
-            " Batman is forced to investigate the city's hidden corruption and question his family's involvement.","Matt Reeves")
-
-                };
+            " Batman is forced to investigate the city's hidden corruption and question his family's involvement.","Matt Reeves", Guid.Parse("189BB33A-FD40-47C6-BFF0-9C404321CC6F")) };
         }
 
-        public async Task AddAsync(Film film)
+        public async Task<Guid> AddAsync(Film film)
         {
           Films.Add(film);
+            return Guid.NewGuid();
         }
 
         public async Task DeleteAsync(string film)

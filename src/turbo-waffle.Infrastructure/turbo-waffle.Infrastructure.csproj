@@ -5,6 +5,7 @@
     <RootNamespace>turbo_waffle.Infrastructure</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+	  
   </PropertyGroup>
 
   <ItemGroup>

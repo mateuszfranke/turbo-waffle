@@ -1,0 +1,3 @@
+@adress = https://localhost:7204
+### Get all avaialble cinemas
+GET {{adress}}/cinemas

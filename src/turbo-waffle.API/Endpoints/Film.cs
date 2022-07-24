@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using turbo_waffle.API.DTO;
-using turbo_waffle.Core;
+using turbo_waffle.Core.Repositories;
 
 namespace turbo_waffle.API.Endpoints
 {
@@ -28,15 +28,15 @@ namespace turbo_waffle.API.Endpoints
                 return Results.NoContent();
             });
 
-            app.MapPut("film", async (IFilmRepository filmRepository, [FromBody] FilmRequest filmRequest) =>
+            app.MapPut("film", async (IFilmRepository filmRepository, [FromBody] FilmRequest filmRequest, [FromQuery] Guid id ) =>
             {
-                var film = new Core.Film(filmRequest.Name, filmRequest.Description, filmRequest.Author);
+                var film = new Core.Film(filmRequest.Name, filmRequest.Description, filmRequest.Author, id);
                 await filmRepository.UpdateAsync(film);
                 return Results.NoContent();
             });
 
             app.MapPost("film", async (FilmRequest filmRequest, IFilmRepository filmRepository) => {
-                var film = new Core.Film(filmRequest.Name, filmRequest.Description, filmRequest.Author);
+                var film = new Core.Film(filmRequest.Name, filmRequest.Description, filmRequest.Author, Guid.NewGuid());
                 await filmRepository.AddAsync(film);
                 return Results.Ok();
             });
@@ -47,7 +47,6 @@ namespace turbo_waffle.API.Endpoints
                 var randomNumber = new Random().Next(0, allFilms.Count);
 
                 return Results.Ok(allFilms.ToArray()[randomNumber]);
-
 
             });
             return app;
