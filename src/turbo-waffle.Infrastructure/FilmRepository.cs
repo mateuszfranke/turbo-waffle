@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using turbo_waffle.Core;
+﻿using turbo_waffle.Core;
 
 namespace turbo_waffle.Infrastructure
 {
@@ -29,9 +24,26 @@ namespace turbo_waffle.Infrastructure
           Films.Add(film);
         }
 
+        public async Task DeleteAsync(string film)
+        {
+            var filmEntity = await GetAsync(film);
+            Films.Remove(filmEntity);
+        }
+
         public async Task<IReadOnlyCollection<Film>> GetAsync()
         {
             return await Task.FromResult(Films);
+        }
+
+        public async Task<Film> GetAsync(string name)
+        {
+            var film = Films.FirstOrDefault(x => x.Name == name);
+            return film;
+        }
+
+        public Task UpdateAsync(Film film)
+        {
+            throw new NotImplementedException();
         }
     }
 }

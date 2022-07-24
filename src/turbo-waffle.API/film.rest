@@ -1,0 +1,23 @@
+@adress = https://localhost:7204
+### Get all films
+GET {{adress}}/films
+
+### Get film by name
+GET {{adress}}/film?name=The Batman
+
+### Delete the film
+DELETE  {{adress}}/film?name=The Batman
+
+### Add new film to gallery
+POST {{adress}}/film
+Content-Type: application/json
+
+{
+    "name":"Uncharted",
+    "description":"Street-smart Nathan Drake is recruited by seasoned treasure hunter Victor \"Sully\" Sullivan to recover a fortune amassed by Ferdinand Magellan, and lost 500 years ago by the House of Moncada.",
+    "Author" : "Ruben Fleischer"
+  
+}
+
+### Get random film
+GET {{adress}}/random-film

@@ -12,7 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\turbo-waffle.Core\turbo-waffle.Core.csproj" />
     <ProjectReference Include="..\turbo-waffle.Infrastructure\turbo-waffle.Infrastructure.csproj" />
   </ItemGroup>
 
