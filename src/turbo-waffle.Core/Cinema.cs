@@ -5,6 +5,6 @@
         public string Name { get; set; }
         public string City { get; set; }
         public string Location { get; set; }
-        public IEnumerable<Film> CurrentFilms { get; private set; }
+        public IList<Film> CurrentFilms { get; private set; }
     }
 }

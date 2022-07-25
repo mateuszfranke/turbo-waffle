@@ -1,3 +1,6 @@
 @adress = https://localhost:7204
 ### Get all avaialble cinemas
 GET {{adress}}/cinemas
+
+### Get Cinema
+GET {{adress}}/cinema/64f65527-9ee7-4747-9970-5312c9278342

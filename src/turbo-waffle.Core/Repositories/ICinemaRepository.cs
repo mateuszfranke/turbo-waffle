@@ -4,5 +4,6 @@
     {
         Task AddAsync(Cinema cinema);
         Task<IEnumerable<Cinema>> GetAsync();
+        Task<Cinema> GetAsync(Guid id);
     }
 }
