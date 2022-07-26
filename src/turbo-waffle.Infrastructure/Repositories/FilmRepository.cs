@@ -1,6 +1,6 @@
 ﻿using turbo_waffle.Core.Repositories;
 
-namespace turbo_waffle.Infrastructure
+namespace turbo_waffle.Infrastructure.Repositories
 {
     public class FilmRepository : IFilmRepository
     {
