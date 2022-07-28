@@ -7,7 +7,9 @@ builder.Services
 
 var app = builder.Build();
 
+
 app
     .AddFilmEndpoints()
+    .AddRepertoireEndpoints()
     .AddCinemaEndpoints()
     .Run();
