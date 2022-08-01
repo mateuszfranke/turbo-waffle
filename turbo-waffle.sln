@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "turbo-waffle.Shared.Abstrac
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "turbo-waffle.Shared.Infrastructure", "src\shared\turbo-waffle.Shared.Infrastructure\turbo-waffle.Shared.Infrastructure.csproj", "{C4F92B7E-629F-4F01-B9FA-986D6AC040CB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "turbo-waffel.Application", "src\turbo-waffel.Application\turbo-waffel.Application.csproj", "{7B24A51B-2422-40E4-86F3-D7836881BEAF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,10 @@ Global
 		{C4F92B7E-629F-4F01-B9FA-986D6AC040CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C4F92B7E-629F-4F01-B9FA-986D6AC040CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C4F92B7E-629F-4F01-B9FA-986D6AC040CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B24A51B-2422-40E4-86F3-D7836881BEAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B24A51B-2422-40E4-86F3-D7836881BEAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B24A51B-2422-40E4-86F3-D7836881BEAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B24A51B-2422-40E4-86F3-D7836881BEAF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -54,6 +60,7 @@ Global
 		{6BDD8DAB-35E0-4F2C-BCA0-0A007937AAB0} = {72ADF12D-58B4-4780-A48B-3B2AE30C2483}
 		{700AEA22-C905-4B26-8E90-D9F130F4F04F} = {6BDD8DAB-35E0-4F2C-BCA0-0A007937AAB0}
 		{C4F92B7E-629F-4F01-B9FA-986D6AC040CB} = {6BDD8DAB-35E0-4F2C-BCA0-0A007937AAB0}
+		{7B24A51B-2422-40E4-86F3-D7836881BEAF} = {72ADF12D-58B4-4780-A48B-3B2AE30C2483}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2A2ADB2A-0E4C-441D-B8B7-B311483C2186}

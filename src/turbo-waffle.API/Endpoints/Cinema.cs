@@ -25,7 +25,12 @@ internal static class Cinema
             var cinema = new Core.Cinema() { City = request.City, Location = request.Location, Name = request.Name };
             await cinemaRepository.AddAsync(cinema);
         });
-
+        app
+        .MapGet("/cinema/{id:Guid}/repositories/", async (IRepertoireRepository repertoireRepository, Guid id) =>
+        {
+            var repertoires = await repertoireRepository.GetAsync(id);
+            return Results.Ok(repertoires);
+        });
         return app;
     }
 }
