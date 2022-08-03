@@ -1,10 +1,14 @@
 ﻿using System;
+using MediatR;
+using turbo_waffle.Core;
+
 namespace turbo_waffel.Application.Queries.CinemaRepertoire
 {
-    public class CinemaRepertoireQueryHandler
+    public class CinemaRepertoireQueryHandler : IRequestHandler<CinemaRepertoireQuery, Cinema>
     {
-        public CinemaRepertoireQueryHandler()
+        public async Task<Cinema> Handle(CinemaRepertoireQuery request, CancellationToken cancellationToken)
         {
+            throw new NotImplementedException();
         }
     }
 }

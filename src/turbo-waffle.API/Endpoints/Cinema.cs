@@ -1,3 +1,6 @@
+using MediatR;
+using Microsoft.AspNetCore.Mvc;
+using turbo_waffel.Application.Queries.CinemaRepertoire;
 using turbo_waffle.API.DTO;
 using turbo_waffle.Core.Repositories;
 
@@ -26,10 +29,9 @@ internal static class Cinema
             await cinemaRepository.AddAsync(cinema);
         });
         app
-        .MapGet("/cinema/{id:Guid}/repositories/", async (IRepertoireRepository repertoireRepository, Guid id) =>
+        .MapGet("/cinema/{id:Guid}/repertoires", async (ISender bus, [FromRoute]Guid id) =>
         {
-            var repertoires = await repertoireRepository.GetAsync(id);
-            return Results.Ok(repertoires);
+            await bus.Send(new CinemaRepertoireQuery(id));
         });
         return app;
     }
